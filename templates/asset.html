@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+<div style="width: 1000px; margin: 0 auto">
+    <h3>资产清档</h3>
+    <div>
+        <button class="btn btn-default" type="submit" id="checkall">全选</button>
+        <button class="btn btn-default" type="submit" id="inverse">反选</button>
+        <button class="btn btn-default" type="submit" id="cancel">取消</button>
+        <button class="btn btn-default" type="submit" id="editMode">加入编辑模式</button>
+        <button class="btn btn-default" type="submit" id="delete">批量删除</button>
+        <button class="btn btn-default" type="submit" id="save">保存</button>
+    </div>
+    <table class="table table-hover">
+        <thead id="table_th">
+        </thead>
+        <tbody id="table_tb">
+        </tbody>
+    </table>
+    <ul class="pagination" id="pagination">
+
+    </ul>
+</div>
+<script src="/static/jquery-3.3.1.js"></script>
+<script src="/static/Curd-util.js"></script>
+<script>
+    $(function () {
+        $.CURD("/web/asset-json");
+    });
+
+</script>
+</body>
+</html>
